@@ -1,0 +1,26 @@
+@rootUrl= http://localhost:8000
+
+###check if the server is running
+GET {{rootUrl}}
+
+###creating a new user
+POST {{rootUrl}}/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "fName": "bibek",
+    "lName": "malla",
+    "email": "b@kaabaabb.com",
+    "password": "texy",
+    "role": "user"
+}
+
+###activating a user
+POST {{rootUrl}}/api/v1/auth/activate-user
+Content-Type: application/json
+
+{
+
+    "sessionId": "687ae956ac959ba506356ff6",
+    "t": "c0438c30-3cd4-450f-abe2-0f2e391b2136"
+}
